@@ -16,7 +16,7 @@ class Bag:
 
     # Remove by index
     def remove(self, item):
-        assert item in self._items
+        assert item in self._items, "isn\'t here"
         idx = self._items.index(item)
         return self._items.pop(idx)
 
@@ -24,6 +24,7 @@ class Bag:
 
     # Iterator
     def __iter__(self):
+        self._current_item = -1
         return self
     
     # Iterator
